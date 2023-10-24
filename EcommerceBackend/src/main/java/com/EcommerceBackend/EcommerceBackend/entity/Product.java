@@ -38,9 +38,9 @@ public class Product {
     @Column(name = "date_created")
     @CreationTimestamp
     private Date dateCreated;
-    @Column(name = "last_modified")
+    @Column(name = "last_updated")
     @UpdateTimestamp
-    private Date lastModified;
+    private Date lastUpdated;
 
 
 }
