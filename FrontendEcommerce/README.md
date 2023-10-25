@@ -35,3 +35,8 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## git checkout -b new branchName  // create new branch and checkout 
 
+
+#  Install bootstrap
+
+# npm install bootstrap@5.2.0
+# npm install @fortawesome/fontawesome-free
