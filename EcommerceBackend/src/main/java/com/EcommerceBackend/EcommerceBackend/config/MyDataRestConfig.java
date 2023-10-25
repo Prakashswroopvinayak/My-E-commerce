@@ -9,6 +9,8 @@ import org.springframework.data.rest.webmvc.config.RepositoryRestConfigurer;
 import org.springframework.http.HttpMethod;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 
+import java.util.Collections;
+
 @Configuration
 public class MyDataRestConfig implements RepositoryRestConfigurer {
     @Override
@@ -25,8 +27,7 @@ public class MyDataRestConfig implements RepositoryRestConfigurer {
         config.getExposureConfiguration()
                 .forDomainType(ProductCategory.class)
                 .withItemExposure((metdata, httpMethods) -> httpMethods.disable(theUnsupportedActions))
-                .withCollectionExposure((metdata, httpMethods) -> {
-                    return httpMethods.disable(theUnsupportedActions);
-                });
+                .withCollectionExposure((metdata, httpMethods) -> httpMethods.disable(theUnsupportedActions));
+
     }
 }
