@@ -33,7 +33,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## git pull origin master // take the latest code from master branch 
 
-## git checkout -b new branchName  // create new branch and checkout 
+## git checkout -b new_branch_Name  // create new branch and checkout 
 
 
 #  Install bootstrap
