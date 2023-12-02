@@ -22,8 +22,6 @@ export class ProductCategoryMenuComponent {
   listProductCategories(){
     this.productService.getProductCategories().subscribe(
       data =>{
-        console.log('@@ product category : '+ JSON.stringify(data));
-
         this.productCategories = data;
       }
     );
