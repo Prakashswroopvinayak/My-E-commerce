@@ -44,6 +44,23 @@ export class CartService {
 
     this.computeCartTotals();
   }
+  removeFromCart(theCartItem: CartItem){
+    theCartItem.quantity--;
+
+    if(theCartItem.quantity==0){
+      this.remove(theCartItem);
+    }
+    this.computeCartTotals();
+    
+
+  }
+  remove(theCartItem: CartItem) {
+    const itemIndex = this.cartItems.findIndex(cartItem => cartItem.id==theCartItem.id)
+    if(itemIndex>-1){
+      this.cartItems.splice(itemIndex,1);
+    }
+   
+  }
   computeCartTotals() {
     let totalPriceValue: number = 0;
     let totalQuantityValue: number = 0;
@@ -55,6 +72,7 @@ export class CartService {
     // publish the new value .... all subscribers will recive the new data
     this.totalPrice.next(totalPriceValue);
     this.totalQuantity.next(totalQuantityValue);
+    
 
     // log cart data
     
